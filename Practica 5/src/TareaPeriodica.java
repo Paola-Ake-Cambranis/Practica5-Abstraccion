@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class TareaPeriodica{
+public abstract class TareaPeriodica{
 
 	protected int periodo;
 	protected Date ultimaEjecucion;
@@ -21,14 +21,10 @@ public class TareaPeriodica{
 	public void activar() { activa = true; }
 	public void desactivar() { activa = false; }
 	
-	public boolean necesitaEjecucion() {
-		return false;
+	public abstract boolean necesitaEjecucion();
 		// Metodo blanco intencionalmente
-	}
 	
-	public int ejecutarTarea() {
-		return 0;
+	public abstract int ejecutarTarea();
 		// Método blanco intencionalmente
-	}
 	
 }
