@@ -1,6 +1,6 @@
 import java.util.*;
 
-public abstract class TareaPeriodica{
+public abstract class TareaPeriodica implements Runnable{
 
 	protected int periodo;
 	protected Date ultimaEjecucion;
@@ -26,5 +26,4 @@ public abstract class TareaPeriodica{
 	
 	public abstract int ejecutarTarea();
 		// Método blanco intencionalmente
-	
 }
