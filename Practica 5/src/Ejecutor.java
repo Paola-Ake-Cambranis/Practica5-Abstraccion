@@ -3,7 +3,7 @@ import java.io.IOException;
 
 public class Ejecutor extends TareaPeriodica{
 	
-	private String comando;
+	protected String comando;
 	
 	public Ejecutor(String comando, int periodo){
 		super(periodo);
@@ -24,12 +24,12 @@ public class Ejecutor extends TareaPeriodica{
         //	Comprobamos	si	ha	pasado	a	la	hora	actual
         return	(proximaEjecucion.before(ahora));
 }
-public	int	ejecutarTarea()	{
+    public	int	ejecutarTarea()	{
         try	{	
-                    Runtime.getRuntime().exec(comando);	
-                    return	0;
+            Runtime.getRuntime().exec(comando);	
+            return	0;
         } catch(IOException	e)	{
-                    System.err.println(e.toString());
+            System.err.println(e.toString());
         }
         return -1;
     }
